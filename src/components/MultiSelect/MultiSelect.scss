@@ -1,20 +1,5 @@
-// MultiSelect.scss
 .multi-select {
     position: relative;
-  
-    &__selected-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-  
-    &__selected-item {
-      background-color: #3498db;
-      color: #fff;
-      padding: 4px 8px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
   
     &__input {
       padding: 8px;
