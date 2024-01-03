@@ -4,9 +4,9 @@ import MultiSelect from "./components/MultiSelect/MultiSelect";
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
+			<div className="container">
 				<MultiSelect />
-			</header>
+			</div>
 		</div>
 	);
 }

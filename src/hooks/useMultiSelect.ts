@@ -2,9 +2,13 @@ import { useState } from "react";
 
 interface useMultiSelectProps {
 	initialDropdownItems: string[];
+	handleWrapperClick: () => void;
 }
 
-const useMultiSelect = ({ initialDropdownItems }: useMultiSelectProps) => {
+const useMultiSelect = ({
+	initialDropdownItems,
+	handleWrapperClick,
+}: useMultiSelectProps) => {
 	const [dropdownItems, setDropdownItems] =
 		useState<string[]>(initialDropdownItems);
 	const [selectedDropdownItems, setSelectedDropdownItems] = useState<
@@ -27,16 +31,14 @@ const useMultiSelect = ({ initialDropdownItems }: useMultiSelectProps) => {
 		} else {
 			setSelectedDropdownItems((prevItems) => [...prevItems, item]);
 		}
+		handleWrapperClick();
 	};
-
-	const handleClose = () => {};
 
 	return {
 		dropdownItems,
 		selectedDropdownItems,
 		handleAddItem,
 		handleDropdownItemClick,
-		handleClose,
 	};
 };
 
