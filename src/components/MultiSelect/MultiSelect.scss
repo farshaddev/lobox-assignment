@@ -1,0 +1,43 @@
+.multi-select {
+	position: relative;
+
+	&__wrapper {
+		position: relative;
+		padding: 0.5em 0.8em;
+		font-size: 1em;
+		color: #a1a1a1;
+		font-weight: 600;
+		border: 0.1em solid #dddddd;
+		border-radius: 1em;
+		width: 100%;
+		cursor: pointer;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		&-arrow {
+			position: absolute;
+			right: 8px;
+			top: calc(50% - 9px);
+			font-size: 18px;
+			z-index: 10;
+		}
+
+		&--focus {
+			border-color: #6189f7;
+			box-shadow: 0 0px 2px 2px rgb(123 158 255 / 50%);
+		}
+		&--selected {
+			gap: 1em;
+		}
+
+		&-input {
+			min-width: 18em;
+			padding: 0;
+			border: 0;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
